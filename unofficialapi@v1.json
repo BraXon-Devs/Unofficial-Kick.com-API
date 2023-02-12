@@ -1,0 +1,232 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Unofficiall Kick.com API",
+    "version": "0.0.1",
+    "description": "Made by fan of kick.com :)"
+  },
+  "servers": [
+    {
+      "url": "https://kick.com",
+      "variables": {}
+    }
+  ],
+  "tags": [
+    {
+      "name": "User",
+      "description": "All api used by client side"
+    },
+    {
+      "name": "Other",
+      "description": "Other api that got found but is unknown how to use"
+    }
+  ],
+  "paths": {
+    "/api/v1/categories/top": {
+      "summary": "User",
+      "description": "Allows you to see all top categories on kick",
+      "get": {
+        "summary": "Allows you to get all data that kick supply of categories",
+        "description": "",
+        "operationId": "",
+        "responses": {
+          "default": {
+            "description": "Default error sample response"
+          }
+        },
+        "tags": [
+          "User"
+        ]
+      }
+    },
+    "/api/v1/channels/{Channel_Name}": {
+      "summary": "Gets all data about a channel",
+      "description": "Gets all data about a channel",
+      "get": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Channel_Name",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minimum": 1
+            },
+            "description": "Name of the channel"
+          }
+        ],
+        "summary": "Gets all data about users channel",
+        "description": "",
+        "operationId": "",
+        "responses": {
+          "default": {
+            "description": "Default error sample response"
+          }
+        },
+        "tags": [
+          "User"
+        ]
+      }
+    },
+    "/api/v1/current-viewers": {
+      "summary": "Gives data about view count of the strea",
+      "description": "Gives data about view count of the strea",
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ids[]",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "allowReserved": true
+          }
+        ],
+        "summary": "Gives data about view count of the strea",
+        "description": "Gives data about view count of the strea",
+        "operationId": "",
+        "responses": {
+          "default": {
+            "description": "Default error sample response"
+          }
+        },
+        "tags": [
+          "User"
+        ]
+      }
+    },
+    "/api/v1/channels/{CHANNEL_NAME}/links": {
+      "summary": "Gives you all blocks that channel have added to there description",
+      "description": "Gives you all blocks that channel have added to there description",
+      "get": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "CHANNEL_NAME",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "allowReserved": true
+          }
+        ],
+        "summary": "Gives you all blocks that channel have added to there description",
+        "description": "Gives you all blocks that channel have added to there description",
+        "operationId": "",
+        "responses": {
+          "default": {
+            "description": "Default error sample response"
+          }
+        },
+        "tags": [
+          "User"
+        ]
+      }
+    },
+    "/api/search": {
+      "summary": "Gives you all data based on word you searched",
+      "description": "Gives you all data based on word you searched",
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "searched_word",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "allowReserved": true
+          }
+        ],
+        "summary": "Gives you all data based on word you searched",
+        "description": "Gives you all data based on word you searched",
+        "operationId": "",
+        "responses": {
+          "default": {
+            "description": "Default error sample response"
+          }
+        },
+        "tags": [
+          "User"
+        ]
+      }
+    },
+    "/thumbnails/livestream/{STREAM_ID}/thumb53/video_thumbnail/responsives/thumb53___video_thumbnail_1606_903.webp": {
+      "summary": "Gives you the thumnail made by kick of the stream",
+      "description": "Gives you the thumnail made by kick of the stream",
+      "get": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "STREAM_ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "allowReserved": true
+          }
+        ],
+        "summary": "Gives you the thumnail made by kick of the stream",
+        "description": "Gives you the thumnail made by kick of the stream",
+        "operationId": "",
+        "responses": {
+          "default": {
+            "description": "Default error sample response"
+          }
+        },
+        "tags": [
+          "User"
+        ]
+      }
+    },
+    "/api/v1/channels/user/subscribe": {
+      "summary": "Only used when following people by kick",
+      "description": "Only used when following people by kick",
+      "post": {
+        "summary": "Only used when following people by kick",
+        "description": "Only used when following people by kick",
+        "responses": {
+          "default": {
+            "description": "Default error sample response"
+          }
+        },
+        "tags": [
+          "Other"
+        ]
+      }
+    },
+    "/api/v1/channels/CHANNEM_NAME/followers": {
+      "summary": "Unknown for now",
+      "description": "Unknown for now",
+      "get": {
+        "summary": "Unknown for now",
+        "description": "Unknown for now",
+        "responses": {
+          "default": {
+            "description": "Default error sample response"
+          }
+        },
+        "tags": [
+          "Other"
+        ]
+      }
+    },
+    "/api/v1/channels/CHANNEM_NAME/chat": {
+      "summary": "As official `secret` documentation says its for sending message on chat",
+      "description": "As official `secret` documentation says its for sending message on chat",
+      "post": {
+        "summary": "As official `secret` documentation says its for sending message on chat",
+        "description": "As official `secret` documentation says its for sending message on chat",
+        "responses": {
+          "default": {
+            "description": "Default error sample response"
+          }
+        },
+        "tags": [
+          "Other"
+        ]
+      }
+    }
+  }
+}
